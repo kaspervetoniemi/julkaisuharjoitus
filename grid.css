@@ -1,0 +1,131 @@
+/* || PERUSASETUKSET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* SIVUN PÄÄASETTELU GRID  */
+.grid-container {
+    display: grid;
+    gap: 15px;
+    min-height: 100vh;
+    /* Mobiiliasettelu: */
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+}
+
+/* Alueiden nimeäminen grid */
+.header { 
+    grid-area: header; 
+    background-color: #a8c9a4; 
+    padding: 2rem; 
+    text-align: center; 
+    color: white; 
+}
+
+.nav { 
+    grid-area: nav;    
+    background-color: #81a37e; 
+    padding: 1rem; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.main { 
+    grid-area: main;   
+    background-color: white;   
+    padding: 2rem; 
+}
+
+.aside { 
+    grid-area: aside;  
+    background-color: #ddd;    
+    padding: 2rem; 
+    border-radius: 4px;
+}
+
+.footer { 
+    grid-area: footer; 
+    background-color: #384745; 
+    padding: 1.5rem; 
+    text-align: center; 
+    color: white; 
+}
+
+/* Navigaation linkit */
+.nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.nav a:hover { 
+    text-decoration: underline; 
+}
+
+/* KUVAR MAIN ALUEEN SISÄLLÄ */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    width: 45%; 
+    min-width: 280px; 
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.program-grid {
+    display: grid;
+    /* Responsiivinen täyttö: vähintään 200px, muuten täyttää tilan (1fr) */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 6px solid #81a37e;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* RESPONSIIVISUUS MEDIA QUERY */
+@media (min-width: 850px) {
+    .grid-container {
+        /* Leveä näyttö: 3 saraketta (nav 200px, main joustava 1fr, aside 250px) */
+        grid-template-columns: 200px 1fr 250px;
+        grid-template-areas: 
+            "header header header"
+            "nav    main   aside"
+            "footer footer footer";
+    }
+
+    /* Sivupalkin navigaatio pystysuuntaan */
+    .nav {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}

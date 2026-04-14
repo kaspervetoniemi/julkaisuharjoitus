@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Opi käyttämään CSS Grid asettelua tehokkaasti. Tämä opas opettaa responsiivisten näkymien luomisen ja ruudukon hallinnan perusteet.">
+    <title>Tapahtumasivu - Grid </title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+
+    <div class="grid-container">
+        <header class="header">
+            <h1>Kesäfestari 2026</h1>
+            <p>Parasta tunnelmaa Tampereella</p>
+        </header>
+
+        <nav class="nav">
+            <a href="#">Ohjelma</a>
+            <a href="#">Liput</a>
+            <a href="#">Saapuminen</a>
+            <a href="#">Yhteystiedot</a>
+        </nav>
+
+        <main class="main">
+            <section class="intro">
+                <h2>Tervetuloa vuoden parhaaseen tapahtumaan!</h2>
+                <p>Aika: 15.-17. Heinäkuuta 2026 | Paikka: Koskipuisto, Tampere</p>
+                
+                <div class="image-gallery">
+                    <img src="koskipuisto.jpg" alt="Kuva tapahtumapaikalta.">
+                    <img src="koskipuisto2.jpg" alt="Toinen kuva tapahtumapaikalta.">
+                </div>
+            </section>
+            
+            <section class="program-section">
+                <h2>Tapahtuman ohjelma</h2>
+                <div class="program-grid">
+                    <div class="card"><h3>Perjantai</h3><p>Rock-ilta</p></div>
+                    <div class="card"><h3>Lauantai</h3><p>Pop-huumaa</p></div>
+                    <div class="card"><h3>Sunnuntai</h3><p>Perhepäivä</p></div>
+                    <div class="card"><h3>Yökeikat</h3><p>Klubitunnelmaa</p></div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="aside">
+            <h3>Pika-info</h3>
+            <ul>
+                <li>Liput alk. 40€</li>
+                <li>Ikäraja K-12</li>
+                <li>Sponsori: Kasper</li>
+            </ul>
+        </aside>
+
+        <footer class="footer">
+            <p>Järjestäjä: Kasper Vetoniemi | Yhteystiedot: kasper@tapahtuma.fi</p>
+        </footer>
+    </div>
+
+</body>
+</html>
